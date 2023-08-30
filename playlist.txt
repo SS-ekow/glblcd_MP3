@@ -1,0 +1,10 @@
+song1, artist11, 1999, 2:34, edm
+song2, artist28, 1999, 3:34, pop
+song3, artist17, 1999, 1:54, jazz-
+song4, artist13, 1999, 2:34, rap
+song5, artist17, 1999, 2:34, rock
+song13, artist51, 1999, 2:44, afrobeat
+song15, artist21, 1999, 6:34, grime
+song12, artist12, 1999, 4:14, drill
+song15, artist13, 1999, 3:04, edm
+song15, artist14, 1999, 9:34, edm

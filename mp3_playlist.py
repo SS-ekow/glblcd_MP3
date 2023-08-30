@@ -49,7 +49,7 @@ class MP3Playlist:
         x = [int(i.split(':')[0]) for i in durations]
         y = [int(i.split(':')[1]) for i in durations]
         
-        
+        total_hours = 0
         total_minutes = sum(x)
         total_seconds = sum(y)
         
@@ -57,9 +57,12 @@ class MP3Playlist:
             total_minutes += 1
             total_seconds -= 60
             
+        while total_minutes >=60:
+            total_hours +=1
+            total_minutes -= 60
     
             
-        return f'Total duration of playlist: {total_minutes} mins and {total_seconds} seconds'
+        return f'Total duration of playlist: {total_hours} hours,{total_minutes} mins and {total_seconds} seconds'
     
     def save_on_file(self, file_path):
         with open(file_path, 'w') as file:
@@ -68,11 +71,11 @@ class MP3Playlist:
                 
         print(f'Playlist saved on {file_path}')
         
-    # def remove_song(self, song_title):
-    #     for song in self.playlist:
-    #         if song.song_title == song_title:
-    #             self.playlist.remove(song)
-    #             print(f'{song_title} has been removed from your playlist')
+#     def remove_song(self, song_title):
+#          for song in self.playlist:
+#              if song.song_title == song_title:
+#                  self.playlist.remove(song)
+#                  print(f'{song_title} has been removed from your playlist')
             
         
             
@@ -104,6 +107,8 @@ playlist.display_all()
 print(playlist.get_duration())
 
 playlist.save_on_file('pls.txt')
+
+
 
  
 # playlist.clear_playlist()
